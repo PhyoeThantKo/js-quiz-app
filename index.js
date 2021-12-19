@@ -51,6 +51,11 @@ function resetState() {
 
 function selectAnswer(e) {
      const selectedButton = e.target
+     const correct = selectedButton.dataset.correct
+     setStatusClass(document.body, correct)
+     Array.from(answerButtonsElement.children).forEach(button => {
+       setStatusClass(button, button.dataset.correct)
+     })
      if(shuffledQuestions.length > currentQuestionIndex + 1){
           nextButton.classList.remove('hide')
      } else{
@@ -60,11 +65,11 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-     clearStatusClass()
+     clearStatusClass(element)
      if(correct){
           element.classList.add('correct')
      } else {
-          element.classList.remove('wrong')
+          element.classList.add('wrong')
      }
 }
 

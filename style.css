@@ -22,12 +22,12 @@ body{
      background-color: hsl(var(--hue), 100%, 20%);
 }
 
-body.corret{
-     background-color: var(--hue-correct);
+body.correct{
+     --hue: var(--hue-correct);
 }
 
 body.wrong{
-     background-color: var(--hue-wrong);
+     --hue: var(--hue-wrong);
 }
 
 #container{
@@ -60,7 +60,7 @@ body.wrong{
      border-color: rgb(4, 255, 255);
 }
 
-.btn.corret{
+.btn.correct{
      --hue: var(--hue-correct);
      color: black;
 }
