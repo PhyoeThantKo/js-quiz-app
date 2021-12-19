@@ -87,21 +87,22 @@ const questions = [
           ]
      },
      {
-          question: 'who ar u?',
+          question: 'who is the father of MAL?',
           answers: [
-               { text: 'ptk', correct: true},
-               { text: 'idhei', correct: false},
-               { text: 'Dev Ed', correct: false },
-               { text: 'Fun Fun Function', correct: false }
+               { text: 'Thaung Hlaing', correct: false},
+               { text: 'woof woof', correct: true},
+               { text: 'Hlaing Thaung', correct: false },
+               { text: 'Khin Hlaing', correct: false}
           ]
      },
      {
-          question: 'when is ur birth year?',
+          question: 'Have you followed my page, PTK, on facebook?',
           answers: [
-               { text: '2003', correct: true},
-               { text: 'idhei', correct: false},
-               { text: 'Dev Ed', correct: false },
-               { text: 'Fun Fun Function', correct: false }
+               { text: 'yes, I have followed', correct: true},
+               { text: 'sure', correct: true},
+               { text: 'yes', correct: true },
+               { text: 'absolutely yes', correct: true }
           ]
-     }
+     },
+
 ]
