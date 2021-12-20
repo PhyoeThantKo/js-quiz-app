@@ -105,3 +105,17 @@ body.wrong{
 .hide{
      display: none;
 }
+
+#resource {
+     position: absolute;
+     top: 80%;
+}
+
+a{
+     color: yellow;
+     text-decoration: none;
+}
+
+a:hover{
+     border-bottom: 1px solid yellowgreen;
+}
