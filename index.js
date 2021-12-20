@@ -3,6 +3,10 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answerbuttons')
+let count = document.getElementById('count')
+let currentCount = 0
+let countController = [ 1, 2, 3, 4, 5]
+
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -15,6 +19,7 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
      startButton.classList.add('hide')
+     count.innerText = 0
      shuffledQuestions = questions.sort( () => Math.random() - .5)
      currentQuestionIndex = 0
      questionContainerElement.classList.remove('hide')
@@ -52,6 +57,14 @@ function resetState() {
 function selectAnswer(e) {
      const selectedButton = e.target
      const correct = selectedButton.dataset.correct
+     if (correct) {
+          currentCount++
+          count.innerText = currentCount
+          
+     }else {
+          currentCount--
+          count.innerText = currentCount
+     }
      setStatusClass(document.body, correct)
      Array.from(answerButtonsElement.children).forEach(button => {
        setStatusClass(button, button.dataset.correct)
@@ -99,9 +112,8 @@ const questions = [
           question: 'Have you followed my page, PTK, on facebook?',
           answers: [
                { text: 'yes, I have followed', correct: true},
-               { text: 'sure', correct: true},
-               { text: 'yes', correct: true },
-               { text: 'absolutely yes', correct: true }
+               { text: 'no', correct: false},
+               { text: 'who are you?', correct: false }
           ]
      },
 
