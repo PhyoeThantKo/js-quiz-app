@@ -60,10 +60,6 @@ function selectAnswer(e) {
      if (correct) {
           currentCount++
           count.innerText = currentCount
-          
-     }else {
-          currentCount--
-          count.innerText = currentCount
      }
      setStatusClass(document.body, correct)
      Array.from(answerButtonsElement.children).forEach(button => {
