@@ -116,5 +116,22 @@ const questions = [
                { text: 'who are you?', correct: false }
           ]
      },
+     {
+          question: 'When did Myanmar gain independence?',
+          answers: [
+               { text: '24 July 1947', correct: false},
+               { text: '4 January 1948', correct: true},
+               { text: '17 April 1948', correct: false }
+          ]
+     },
+     {
+          question: 'Who is the founder of Tesla',
+          answers: [
+               { text: 'Bill Gates', correct: false},
+               { text: 'Mark Zuckerberg', correct: false},
+               { text: 'Elon Musk', correct: true },
+               { text: 'Larry Page and Sergey Brin', correct: false}
+          ]
+     }
 
 ]
